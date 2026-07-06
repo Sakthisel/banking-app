@@ -1,0 +1,64 @@
+.dashboard {
+  @apply space-y-6;
+}
+
+/* Header */
+.header {
+  @apply bg-white p-5 rounded-xl shadow;
+}
+
+.header h1 {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.header p {
+  @apply text-sm text-gray-500;
+}
+
+/* Stats */
+.stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.card {
+  @apply bg-white p-5 rounded-xl shadow hover:shadow-lg transition;
+}
+
+.card h3 {
+  @apply text-sm text-gray-500;
+}
+
+.card p {
+  @apply text-2xl font-bold text-gray-800 mt-2;
+}
+
+/* Sections */
+.section h2 {
+  @apply text-lg font-semibold text-gray-700 mb-3;
+}
+
+/* Actions */
+.actions {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.action-card {
+  @apply bg-white p-5 rounded-xl shadow hover:shadow-lg cursor-pointer transition;
+}
+
+.action-card h3 {
+  @apply font-semibold text-gray-800;
+}
+
+.action-card p {
+  @apply text-sm text-gray-500;
+}
+
+/* Activity */
+.activity {
+  @apply bg-white p-4 rounded-xl shadow space-y-2;
+}
+
+.activity-item {
+  @apply text-sm text-gray-600 border-b last:border-0 py-2;
+}

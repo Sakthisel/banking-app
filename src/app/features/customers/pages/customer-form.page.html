@@ -1,0 +1,21 @@
+<div class="form-page">
+
+  <h1>
+    {{ isEdit ? 'Edit Customer' : 'Add Customer' }}
+  </h1>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <input placeholder="First Name" formControlName="firstName" />
+    <input placeholder="Last Name" formControlName="lastName" />
+    <input placeholder="Email" formControlName="email" />
+    <input placeholder="Account Number" formControlName="accountNumber" />
+    <input type="number" placeholder="Balance" formControlName="balance" />
+
+    <button type="submit">
+      Save
+    </button>
+
+  </form>
+
+</div>

@@ -1,0 +1,43 @@
+.page {
+  @apply p-6 space-y-4;
+}
+
+.header {
+  @apply flex justify-between items-center bg-white p-4 rounded-xl shadow;
+}
+
+.header h1 {
+  @apply text-xl font-bold;
+}
+
+.header button {
+  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700;
+}
+
+.table {
+  @apply bg-white rounded-xl shadow overflow-hidden;
+}
+
+table {
+  @apply w-full text-left;
+}
+
+thead {
+  @apply bg-gray-100;
+}
+
+th, td {
+  @apply p-3 text-sm border-b;
+}
+
+.actions button {
+  @apply px-3 py-1 text-sm rounded mr-2;
+}
+
+.actions button:first-child {
+  @apply bg-yellow-500 text-white;
+}
+
+.actions button:last-child {
+  @apply bg-red-500 text-white;
+}

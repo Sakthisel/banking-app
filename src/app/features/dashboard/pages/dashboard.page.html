@@ -1,0 +1,68 @@
+<div class="dashboard">
+
+  <!-- Header Section -->
+  <div class="header">
+
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome back, {{ userName() }}</p>
+    </div>
+
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="stats">
+
+    @for (item of stats(); track item.title) {
+      <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.value }}</p>
+      </div>
+    }
+
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="section">
+
+    <h2>Quick Actions</h2>
+
+    <div class="actions">
+
+      <div class="action-card">
+        <h3>Create Customer</h3>
+        <p>Add new banking customer</p>
+      </div>
+
+      <div class="action-card">
+        <h3>Open Account</h3>
+        <p>Create savings or current account</p>
+      </div>
+
+      <div class="action-card">
+        <h3>Transfer Money</h3>
+        <p>Process fund transfers</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Activity Feed -->
+  <div class="section">
+
+    <h2>Recent Activity</h2>
+
+    <div class="activity">
+
+      @for (a of activities(); track a) {
+        <div class="activity-item">
+          {{ a }}
+        </div>
+      }
+
+    </div>
+
+  </div>
+
+</div>

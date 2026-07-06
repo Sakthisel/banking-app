@@ -1,0 +1,43 @@
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      SecureBank
+    </div>
+
+    <nav class="nav">
+      @for (item of menu; track item.path) {
+      <a [routerLink]="item.path" routerLinkActive="active">
+        {{ item.label }}
+      </a>
+      }
+    </nav>
+
+  </aside>
+
+  <!-- Main Area -->
+  <div class="main">
+
+    <!-- Header -->
+    <header class="header">
+
+      <div class="title">
+        Banking System
+      </div>
+
+      <button class="logout" (click)="logout()">
+        Logout
+      </button>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="content">
+      <router-outlet />
+    </div>
+
+  </div>
+
+</div>

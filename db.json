@@ -1,0 +1,10 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "balance": 5000
+    }
+  ]
+}

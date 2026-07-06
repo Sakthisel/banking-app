@@ -1,0 +1,63 @@
+<div class="login-container">
+
+  <div class="login-card">
+
+    <!-- Left Side Branding -->
+    <div class="branding">
+      <h1>SecureBank</h1>
+      <p>Next-gen digital banking platform</p>
+
+      <div class="features">
+        <div>✔ Secure Authentication</div>
+        <div>✔ Real-time Transactions</div>
+        <div>✔ 24/7 Account Access</div>
+      </div>
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="form-section">
+
+      <h2>Sign In</h2>
+      <p class="subtitle">Access your banking dashboard</p>
+
+      <form [formGroup]="form" (ngSubmit)="login()">
+
+        <!-- Email -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" placeholder="you@bank.com" />
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" placeholder="••••••••" />
+        </div>
+
+        <!-- Error -->
+        @if (error()) {
+        <div class="error-box">
+          {{ error() }}
+        </div>
+        }
+
+        <!-- Button -->
+        <button type="submit" [disabled]="form.invalid || loading()" class="login-btn">
+          @if (loading()) {
+          Signing in...
+          } @else {
+          Sign In
+          }
+        </button>
+
+      </form>
+
+      <p class="footer-text">
+        Forgot password? Contact your bank administrator
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+.layout {
+  @apply flex min-h-screen bg-slate-100;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply w-64 bg-slate-900 text-white flex flex-col;
+}
+
+.logo {
+  @apply text-2xl font-bold p-6 border-b border-slate-700;
+}
+
+.nav {
+  @apply flex flex-col p-4 space-y-2;
+}
+
+.nav a {
+  @apply px-4 py-2 rounded hover:bg-slate-700 transition;
+}
+
+.nav a.active {
+  @apply bg-blue-600;
+}
+
+/* Main */
+.main {
+  @apply flex-1 flex flex-col;
+}
+
+/* Header */
+.header {
+  @apply flex justify-between items-center bg-white p-4 shadow;
+}
+
+.title {
+  @apply text-lg font-semibold;
+}
+
+.logout {
+  @apply bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600;
+}
+
+/* Content */
+.content {
+  @apply p-6;
+}

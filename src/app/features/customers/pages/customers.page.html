@@ -1,0 +1,56 @@
+<div class="page">
+
+  <div class="header">
+
+    <h1>Customers</h1>
+
+    <button (click)="goToAdd()">
+      + Add Customer
+    </button>
+
+  </div>
+
+  <div class="table">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Account</th>
+          <th>Balance</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        @for (c of customers(); track c.id) {
+          <tr>
+            <td>{{ c.firstName }} {{ c.lastName }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.accountNumber }}</td>
+            <td>${{ c.balance }}</td>
+
+            <td class="actions">
+
+              <button (click)="editCustomer(c.id)">
+                Edit
+              </button>
+
+              <button (click)="deleteCustomer(c.id)">
+                Delete
+              </button>
+
+            </td>
+          </tr>
+        }
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
