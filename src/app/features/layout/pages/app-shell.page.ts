@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../auth/data-access/auth.service';
@@ -7,6 +7,7 @@ import { AuthService } from '../../auth/data-access/auth.service';
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './app-shell.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./app-shell.page.scss'],
 })
 export class AppShellPage {

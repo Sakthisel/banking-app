@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { CustomerService } from '../data-access/customer.service';
@@ -7,6 +7,7 @@ import { CustomerService } from '../data-access/customer.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './customers.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./customers.page.scss'],
 })
 export class CustomersPage {

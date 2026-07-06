@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CustomerService } from '../data-access/customer.service';
@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './customer-form.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./customer-form.page.scss'],
 })
 export class CustomerFormPage {
